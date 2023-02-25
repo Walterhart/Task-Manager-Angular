@@ -1,5 +1,5 @@
 /*
-  Api handler
+  Api handler that follows crud
 */
 import { Injectable } from '@angular/core';
 import { Task } from '../../Task';
@@ -29,5 +29,8 @@ export class TaskService {
   updateCompletedTask(task: Task): Observable<Task> {
     const url = `${this.apiUrl}/${task.id}`;
     return this.http.put<Task>(url, task, httpOptions);
+  }
+  addTask(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.apiUrl, task, httpOptions);
   }
 }

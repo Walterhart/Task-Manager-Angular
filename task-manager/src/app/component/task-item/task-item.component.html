@@ -1,4 +1,4 @@
-<div [ngClass] = "{completed: task.completed}" class="task">
+<div [ngClass] = "{completed: task.completed}"  (dblclick) = "completed()"class="task">
     <h3>{{task.text}}
      <fa-icon (click)="delete()" [ngStyle]="{'color': 'red'}" [icon] = "faTrash"></fa-icon>
     </h3>

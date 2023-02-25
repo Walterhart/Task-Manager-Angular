@@ -15,6 +15,7 @@ import {faTrash} from '@fortawesome/free-solid-svg-icons';
 export class TaskItemComponent implements OnInit {
   @Input() task!: Task;
   @Output() deleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output()  completedTask: EventEmitter<Task> = new EventEmitter();
   faTrash = faTrash;
   constructor() { }
   ngOnInit(): void { }
@@ -22,5 +23,7 @@ export class TaskItemComponent implements OnInit {
   delete() {
     this.deleteTask.emit(this.task);
   }
-
+  completed() {
+    this.completedTask.emit(this.task);
+  }
 }

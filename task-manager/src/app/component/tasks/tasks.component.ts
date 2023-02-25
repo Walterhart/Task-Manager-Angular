@@ -17,11 +17,15 @@ export class TasksComponent implements OnInit  {
   ngOnInit(): void {
       this.taskService.getTasks().subscribe(tasks => this.tasks = tasks);
    }
-   deleteTask(task: Task) {
+  deleteTask(task: Task) {
     this.taskService
       .deleteTask(task)
       .subscribe(
         () => (this.tasks = this.tasks.filter((item) => item.id !== task.id))
       );
+    } 
+  completedTask(task: Task){
+    task.completed =! task.completed;
+    this.taskService.updateCompletedTask(task).subscribe();
 }
 }

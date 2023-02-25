@@ -1,9 +1,9 @@
 {
-"tasks": [
+  "tasks": [
     {
-        "id":1,
-        "text":"Do the dishes", 
-       " day": "today"
+      "id": 2,
+      "text": "Bathe the  dog",
+      "day": "today"
     }
-]
+  ]
 }

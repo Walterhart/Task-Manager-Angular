@@ -3,7 +3,8 @@
     {
       "id": 2,
       "text": "Bathe the  dog",
-      "day": "today"
+      "day": "today",
+      "completed": true
     }
   ]
 }

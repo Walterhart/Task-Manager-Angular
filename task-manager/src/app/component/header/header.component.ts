@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service'
 import { Subscription } from 'rxjs';
 import  { Router }from '@angular/router';
@@ -8,13 +8,13 @@ import  { Router }from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  title: string  = 'task-manager';
-  showAddTask: boolean = true;
+export class HeaderComponent implements OnInit  {
+  title: string  = 'Task-Manager';
+  showAddTask: boolean = false;
   subscription!: Subscription;
 
   constructor(private uiService : UiService, private router:Router) { 
-    this.subscription = this.uiService.toggle().subscribe(vaule => this.showAddTask = vaule);
+    this.subscription = this.uiService.toggle().subscribe((vaule => this.showAddTask = vaule));
   }
   ngOnInit(): void { }
 

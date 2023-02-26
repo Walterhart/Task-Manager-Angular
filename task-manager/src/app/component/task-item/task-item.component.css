@@ -1,12 +1,12 @@
 .task {
-    background: #47c9e0;
+    background: lightgrey;
     margin: 5px;
     padding: 10px 20px;
     cursor: pointer;
   }
   
   .task.completed {
-    border-left: 5px solid rgb(20, 255, 20);
+    border-left: 5px solid blue;
   }
   
   .task h3 {

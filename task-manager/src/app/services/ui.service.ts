@@ -6,13 +6,13 @@ Observable
 })
 export class UiService {
 
-  private showAddedAtask: boolean = false;
+  private showAddTask: boolean = false;
   private subject = new Subject<any>();
 
   constructor() { }
   toggleAddedTask(): void {
-    this.showAddedAtask =!this.showAddedAtask;
-    this.subject.next(this.showAddedAtask);
+    this.showAddTask =!this.showAddTask;
+    this.subject.next(this.showAddTask);
   }
 
   toggle(): Observable<any> {

@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+About TaskManager:
+    User can add, delete, mark as completed and read tasks. 
+
+    To create a new task:
+        Click  open me button located at the top right of the page. Afterwards fill out form and click save button.
+    To read task:
+        Task are automatically shown when created.
+    To delete task:
+        Click red trash icon
+    Mark as completed:
+        Double  click the desire task to mark as completed. Double click again to unmark completed task

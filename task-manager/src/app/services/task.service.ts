@@ -2,7 +2,7 @@
   Api handler that follows crud
 */
 import { Injectable } from '@angular/core';
-import { Task } from '../../Task';
+import { Task } from '../Task';
 import { Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 

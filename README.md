@@ -39,4 +39,4 @@ User can add, delete, mark as completed and read tasks.
 ## To delete task:
     Click red trash icon
 ## Mark as completed:
-    Double  click the desire task to mark as completed. Double click again to unmark completed task
+    Double click the desire task to mark as completed. Double click again to unmark completed task

@@ -13,16 +13,17 @@ export class AddTaskComponent implements OnInit {
   text!: string;
   day!: string;
   completed: boolean = false;
-  showAddTask!: boolean ;
+  showAddTask!: boolean;
   subscription!: Subscription;
-  
 
   constructor(private uiService: UiService) {
-    this.subscription = this.uiService.toggle().subscribe(vaule => this.showAddTask = vaule);
+    this.subscription = this.uiService
+      .toggle()
+      .subscribe((vaule) => (this.showAddTask = vaule));
   }
 
   ngOnInit(): void {}
-  
+
   submit() {
     if (!this.text) {
       alert('Please add a task!');

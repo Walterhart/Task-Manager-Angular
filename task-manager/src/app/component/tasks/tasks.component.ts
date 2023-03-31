@@ -5,17 +5,16 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from '../../Task';
 import { TaskService } from '../../services/task.service';
 
-
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.css']
+  styleUrls: ['./tasks.component.css'],
 })
-export class TasksComponent implements OnInit  {
+export class TasksComponent implements OnInit {
   tasks: Task[] = [];
-  constructor(private taskService: TaskService) { }
+  constructor(private taskService: TaskService) {}
   ngOnInit(): void {
-      this.taskService.getTasks().subscribe(tasks => this.tasks = tasks);
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
   deleteTask(task: Task) {
     this.taskService
@@ -23,13 +22,12 @@ export class TasksComponent implements OnInit  {
       .subscribe(
         () => (this.tasks = this.tasks.filter((item) => item.id !== task.id))
       );
-  } 
-  completedTask(task: Task){
-    task.completed =! task.completed;
+  }
+  completedTask(task: Task) {
+    task.completed = !task.completed;
     this.taskService.updateCompletedTask(task).subscribe();
   }
   addTask(task: Task) {
     this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
   }
 }
-
